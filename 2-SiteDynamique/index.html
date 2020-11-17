@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mon Portfolio</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="stylesheet" href="src/css/main.css">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/167488d5ee.js" crossorigin="anonymous"></script>
+
+        <!-- SEO -->
+        <meta name="description" content="la description du site : mettre des bons mots clés">
+        <meta name="keywords" content="un ensemble de mot, ex webdesigne, webdeveloper ....">
+
+        <!-- Responsive -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    </head>
+    <body>
+        
+        <!-- Header -->
+        <div class="block">
+            <header class="header">
+                <!-- Le logo -->
+                <a href="#" class="header-logo"> Mon Portfolio</a>
+                <!-- Les menus de navigations -->
+                <nav class="header-menu">
+                    <a href="#">Accueil</a>
+                    <a href="#">A propos</a>
+                    <a href="#">Mes travaux</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </header>
+        </div>
+        
+        <!-- Banner -->
+        <div class="block">
+            <div class="banner">
+                <img src="src/img/bg.jpg" alt="le background" class="banner-image">
+                <div class="banner-content">
+                    <h1 class="title is-1">Bienvenue sur mon portfolio</h1>
+                    <h2 class="subtitle">Découvez mes travaux et mon univers !</h2>
+                    <button class="button is-link" id="open_modal">Contactez-moi !</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal_to_open">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close" id="close_modal"></button>
+              </header>
+              <section class="modal-card-body">
+                <!-- Content ... -->
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-link">Save changes</button>
+              </footer>
+            </div>
+          </div>
+
+        <!-- About -->
+        <div class="block">
+            <h2 class="subtitle heading-site">A propos</h2>
+            <div class="container about">
+                <div class="columns">
+                    <div class="column about-single-element">
+                        <i class="fas fa-code icon"></i>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam
+                        </p>
+                    </div>
+                    <div class="column about-single-element">
+                        <i class="fas fa-coffee icon"></i>
+                        <p>
+                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
+                        </p>
+                    </div>
+                    <div class="column about-single-element">
+                        <i class="fas fa-football-ball icon"></i>
+                        <p>
+                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="block">
+            <h2 class="subtitle heading-site">Mon portfolio</h2>
+            <div class="container">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                      <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                          <article class="tile is-child notification is-primary">
+                            <p class="title">Vertical...</p>
+                            <p class="subtitle">Top tile</p>
+                          </article>
+                          <article class="tile is-child notification is-warning">
+                            <p class="title">...tiles</p>
+                            <p class="subtitle">Bottom tile</p>
+                          </article>
+                        </div>
+                        <div class="tile is-parent">
+                          <article class="tile is-child notification is-info">
+                            <p class="title">Middle tile</p>
+                            <p class="subtitle">With an image</p>
+                            <figure class="image is-4by3">
+                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                          </article>
+                        </div>
+                      </div>
+                      <div class="tile is-parent">
+                        <article class="tile is-child notification is-danger">
+                          <p class="title">Wide tile</p>
+                          <p class="subtitle">Aligned with the right tile</p>
+                          <div class="content">
+                            <!-- Content -->
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                    <div class="tile is-parent">
+                      <article class="tile is-child notification is-success">
+                        <div class="content">
+                          <p class="title">Tall tile</p>
+                          <p class="subtitle">With even more content</p>
+                          <div class="content">
+                            <!-- Content -->
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="block">
+            <footer class="footer">
+                <h2 class="heading-site">Contactez-moi</h2>
+                <div class="footer-contact-form">
+                    <form>
+                        <div class="field">
+                            <label class="label">Votre nom</label>
+                            <div class="control">
+                              <input class="input" id="name" type="text" placeholder="e.g Alex Smith" name="name">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Votre prénom</label>
+                            <div class="control">
+                              <input class="input" id="firstname" type="text" placeholder="e.g Alex Smith" name="firstname">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Votre mail</label>
+                            <div class="control">
+                              <input class="input" id="email" type="text" placeholder="e.g Alex Smith" name="email">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Votre message</label>
+                            <div class="control">
+                              <textarea class="textarea" id="message" type="text" placeholder="Explain yout message .... " name="message"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <button class="button is-link" id="send_email">Envoyer</button>
+                </div>
+                <div class="footer-informations">
+                    <p>10 rue de mon adresse</p>
+                    <p>33000 Bordeaux</p>
+                    <ul>
+                        <li><i class="fab fa-facebook"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="src/js/main.js"></script>
+    </body>
+</html>
