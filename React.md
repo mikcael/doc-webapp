@@ -168,3 +168,21 @@ Exemple d'un compteur :
     $ npm install react-router-dom --save
 
 Cf cet [article](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm)
+
+# FontAwesome
+
+Installation:
+
+    npm i --save @fortawesome/fontawesome-svg-core
+    npm install --save @fortawesome/free-solid-svg-icons
+    npm install --save @fortawesome/free-brands-svg-icons
+    npm install --save @fortawesome/react-fontawesome
+
+Importation:
+
+    import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+    import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+Utilisation:
+
+    <FontAwesomeIcon icon={faCoffee} size="4x"/>
