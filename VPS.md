@@ -20,7 +20,7 @@ Interdire la connection root
 Changer le port
 
     $ sudo nano /etc/ssh/sshd_config
-    Port 2907
+    Port 1234
 
 Filter les utilisateurs autorisés
 
