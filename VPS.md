@@ -78,19 +78,25 @@ Redémarrer le service
     try_files $uri $uri/ =404;
     }
 
-5. Editer `/etc/hosts`
+5. Modifier le port de destination 
+
+    location / {
+    proxy_pass http://xxx.xxx.xxx.xxx:8080;
+    }
+
+6. Editer `/etc/hosts`
 
     x.x.x.x         site1.monserver.com
     x.x.x.x         site2.monserver.com
 En remplaçant `x.x.x.x` par l'adresse ip du serveur.
 
-6. Activation des blocs servers
+7. Activation des blocs servers
 
 Il faut créer des liens symboliques vers le répertoire `/etc/nginx/sites-enabled` que Nginx lit toujours au démarrage
     $ sudo ln -s /etc/nginx/sites-available/site1 /etc/nginx/sites-enabled/
     $ sudo ln -s /etc/nginx/sites-available/site2 /etc/nginx/sites-enabled/
 
-7. Vérification
+8. Vérification
 
     $ sudo nginx -t
  doit donner :
@@ -103,7 +109,7 @@ Tester aussi :
     $ curl  site1.monserver.com
     $ curl  site2.monserver.com
 
-8. Redémarrer le serveur
+9. Redémarrer le serveur
 
     $ sudo service nginx restart
 

@@ -36,6 +36,13 @@ Sans les commentaires le fichier ressemble à ça, il faut y mettre à jour les 
     try_files $uri $uri/ =404;
     }
 
+## Modifier le port de destination 
+Toujours dans le même fichier de configuration, modifier la location:
+
+    location / {
+    proxy_pass http://xxx.xxx.xxx.xxx:8080;
+    }
+
 ## Editer `/etc/hosts`
 
     x.x.x.x         site1.monserver.com
