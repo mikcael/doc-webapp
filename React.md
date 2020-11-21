@@ -186,3 +186,62 @@ Importation:
 Utilisation:
 
     <FontAwesomeIcon icon={faCoffee} size="4x"/>
+
+# Google Map React
+Installation
+
+    npm install --save google-map-react
+
+Importation
+
+    import GoogleMapReact from 'google-map-react';
+
+[Exemples d'utilisation](https://www.npmjs.com/package/google-map-react)
+
+# Mapbox
+
+Installation
+
+    npm install --save mapbox-gl
+
+Inclure le CSS
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+Le code
+
+    import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+ 
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWlrY2FlbCIsImEiOiJja2hwYTAwNXIzZWR2MnRsNjQydHZobXMzIn0.hNbVZA7O8gf8uIsibHfP6w';
+    const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+
+Avec un access token:
+
+    pk.eyJ1IjoibWlrY2FlbCIsImEiOiJja2hwYTAwNXIzZWR2MnRsNjQydHZobXMzIn0.hNbVZA7O8gf8uIsibHfP6w
+
+
+Sur du HTML :
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWlrY2FlbCIsImEiOiJja2hwYTAwNXIzZWR2MnRsNjQydHZobXMzIn0.hNbVZA7O8gf8uIsibHfP6w';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+    </script>
+
+[MapBoxGL js](https://docs.mapbox.com/mapbox-gl-js/api/)
+[Autre exemple](https://mariestarck.com/how-to-display-a-mapbox-map-and-geocoder-mapbox-react-tutorial-part-1/)
+[The good one](https://visgl.github.io/react-map-gl/docs/get-started/get-started) 

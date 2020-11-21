@@ -113,9 +113,35 @@ Tester aussi :
 
     $ sudo service nginx restart
 
+
+## SEO
+
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+Voir cet [article](https://www.seo.fr/definition/seo-definition)
+
+## Web analytics
+
+* [Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision)
+* [Matomo](https://matomo.org)
+* [Heap](https://heapanalytics.com/)
+* [Clicky](https://clicky.com/)
+* [Open Web Analytics](http://www.openwebanalytics.com/)
+
+## Maps
+
+* [snazzymaps](https://snazzymaps.com)
+* [mapbox](https://www.mapbox.com/)
+* [leafletjs](http://leafletjs.com/)
+
 ## Liens :
 https://medium.com/simplon-saint-gaudens/chris-explique-configurer-son-propre-vps-pour-des-applications-node-js-bf3807d005c3
 https://medium.com/sebbossoutrot/installation-et-configuration-dun-vps-sur-ovh-avec-debian9-wordpress-et-ssl-810603968b71
 http://playingwithpixels.gildasp.fr/article/debuter-avec-node-js-cote-serveur-pour-les-nuls
 https://www.geek17.com/fr/content/debian-10-buster-prise-en-main-d-un-vps-ssd-d-ovh-103
 multisite: https://docs.ovh.com/fr/hosting/multisites-configurer-un-multisite-sur-mon-hebergement-web/
+
+

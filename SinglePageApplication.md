@@ -7,7 +7,7 @@
 
 ## Tools
 + Bootsnipp
-+ Adobe Color
++ Adobe Color et https://colorswall.com/palette/3/
 + Google fonts
 + Freepik
 
