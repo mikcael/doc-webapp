@@ -173,10 +173,10 @@ Cf cet [article](https://www.kirupa.com/react/creating_single_page_app_react_usi
 
 Installation:
 
-    npm i --save @fortawesome/fontawesome-svg-core
-    npm install --save @fortawesome/free-solid-svg-icons
-    npm install --save @fortawesome/free-brands-svg-icons
-    npm install --save @fortawesome/react-fontawesome
+    $ npm i --save @fortawesome/fontawesome-svg-core
+    $ npm install --save @fortawesome/free-solid-svg-icons
+    $ npm install --save @fortawesome/free-brands-svg-icons
+    $ npm install --save @fortawesome/react-fontawesome
 
 Importation:
 
