@@ -46,23 +46,23 @@ Redémarrer le service
 
 
 ## Configurer Nginx pour le multi-site
-1. Mise en place
+Mise en place
 
     $ sudo mdkir -p /var/www/site1.monserver.com/html 
     $ sudo mdkir -p /var/www/site2.monserver.com/html
     $ sudo chown  $user:$user -R /var/www/site1.monserver.com/html
     $ sudo chown  $user:$user -R /var/www/site2.monserver.com/html
 
-2. Créer les fichiers server block
+Créer les fichiers server block
 
     $ sudo cp /etc/nginx/sites-available/default  /etc/nginx/sites-available/site1
     $ sudo cp /etc/nginx/sites-available/default  /etc/nginx/sites-available/site2
 
-3. Editez les 2 fichiers server block
+Editez les 2 fichiers server block
 
     $ sudo nano /etc/nginx/sites-available/site1
 
-4. Sans les commentaires le fichier ressemble à ça, il faut y mettre à jour les champs `root` et `server_name` :
+Sans les commentaires le fichier ressemble à ça, il faut y mettre à jour les champs `root` et `server_name` :
 
     server {
     listen 80 ;
@@ -78,25 +78,25 @@ Redémarrer le service
     try_files $uri $uri/ =404;
     }
 
-5. Modifier le port de destination 
+Modifier le port de destination 
 
     location / {
     proxy_pass http://xxx.xxx.xxx.xxx:8080;
     }
 
-6. Editer `/etc/hosts`
+Editer `/etc/hosts`
 
     x.x.x.x         site1.monserver.com
     x.x.x.x         site2.monserver.com
 En remplaçant `x.x.x.x` par l'adresse ip du serveur.
 
-7. Activation des blocs servers
+Activation des blocs servers
 
 Il faut créer des liens symboliques vers le répertoire `/etc/nginx/sites-enabled` que Nginx lit toujours au démarrage
     $ sudo ln -s /etc/nginx/sites-available/site1 /etc/nginx/sites-enabled/
     $ sudo ln -s /etc/nginx/sites-available/site2 /etc/nginx/sites-enabled/
 
-8. Vérification
+Vérification
 
     $ sudo nginx -t
  doit donner :
@@ -109,7 +109,7 @@ Tester aussi :
     $ curl  site1.monserver.com
     $ curl  site2.monserver.com
 
-9. Redémarrer le serveur
+Redémarrer le serveur
 
     $ sudo service nginx restart
 
