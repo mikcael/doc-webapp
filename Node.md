@@ -1,16 +1,15 @@
 # NodeJs
 
 # Install
-- Création du répertoire
-- Une fois dedans:
-
+Dans le répertoire nouvellement créé portant le nom du projet:
 
     $ npm init
     $ npm install express
     $ sudo npm install -g nodemon
 
-- On créé le fichier `index.js`
-- Pour le lancer `nodemon index.js`
+On créé le fichier `index.js` et on le lance avec: 
+
+    $ nodemon index.js
 
 # Définir l'API et la documenter
 Définition des routes, par exemple :
