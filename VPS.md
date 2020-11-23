@@ -113,6 +113,40 @@ Tester aussi :
 
     $ sudo service nginx restart
 
+## Configurer un serveur comme service
+
+    $ sudo nano /etc/systemd/system/simplehttp.service
+
+Ecrire le code suivant:
+
+    [Unit]
+    Description=Job that runs the python SimpleHTTPServer daemon
+    Documentation=man:SimpleHTTPServer(1)
+    After=networ.target
+
+    [Service]
+    Type=simple
+    User=debian
+    WorkingDirectory=/var/www/sowatts.net/public
+    ExecStart=/usr/bin/python -m SimpleHTTPServer 8080 &
+    ExecStop=/bin/kill `/bin/ps aux | /bin/grep SimpleHTTPServer | /bin/grep -v grep | /usr/bin/awk '{ print $2 }'`
+    Restart=on-abort
+
+    [Install]
+    WantedBy=multi-user.target
+
+Puis 
+
+    $ sudo systemctl daemon-reload
+    $ sudo systemctl restart simplehttp.service
+
+Pour le lancer au démarrage (`disable` pour l'enlever):
+
+    $ sudo systemctl enable simplehttp.service
+
+Pour voir le journal:
+
+    $ sudo journalctl -u simplehttp.service
 
 ## SEO
 
