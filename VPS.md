@@ -148,6 +148,14 @@ Pour voir le journal:
 
     $ sudo journalctl -u simplehttp.service
 
+Autre commandes:
+
+    $ sudo systemctl status simplehttp.service
+    $ sudo systemctl is-active simplehttp.service
+    $ sudo systemctl is-enabled simplehttp.service
+    $ sudo systemctl is-failed simplehttp.service
+    $ sudo systemctl list-units
+
 ## SEO
 
     <meta
