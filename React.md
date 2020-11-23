@@ -1,4 +1,6 @@
-# Prérequis
+# React
+
+## Prérequis
 
 * NodeJs
 * yarn : `$ curl -o- -L https://yarnpkg.com/install.sh | bash` si pas d'utilisation de npm
@@ -7,7 +9,7 @@
 Pour compiler le JSX : [babel](https://babeljs.io)
 Pour builder le projet : [webpack](https://webpack.js.org)
 
-# Créer une App 
+## Créer une App 
 
 Avec l'outils [create-react-app](https://github.com/facebook/create-react-app) qu'il n'est pas nécessaire de télécharger.
 
@@ -29,13 +31,20 @@ En gros dans la structure du projet React on a :
 
 /!\ EN React on ne manipule pas le DOM nous même, on laisse React gérer l'affichage donc pas d'`#id` js classique et de `querySelector`
 
-# Build d'une app
+## Build d'une app
 
     $ npm run build
 
 Puis transfert du contenu du répertoire `build` sur le serveur web
 
-# React Bootstrap
+## Deploiement sur Node
+
+**/!\** Il faut que le code suit dans le répertoire `build` sur le serveur 
+Peut être passer par un :
+
+    $ ln -s ../public build
+
+## React Bootstrap
 
 https://react-bootstrap.github.io
 
@@ -60,7 +69,7 @@ Autre méthode, utiliser le Bootstrap original:
     import './bootstrap.min.css';
 Après avoir copier le fichier télécharger
 
-# Attacher un comportement à un bouton
+## Attacher un comportement à un bouton
 `onClick`, qui va perdre le this une `fois` dans la fonction. 3 solutions:
 * `.bind(this)`dans le `onClick={this.handleClick.bind(this)}`
 * une fonction fléchée dans le `onClick={()=> this.handleClick()}`
@@ -77,7 +86,7 @@ une fonction déclarée avec `const` dans une classe est une fonction à part en
 
 Si comme dans le cas du `submit` d'un formulaire on passe l'event, penser à commencer la fonction par `event.preventDefault();` pour éviter le rechargement dela page.
 
-# Modifier le state
+## Modifier le state
 le `state` ne peut pas être modifié directement sinon React ne le reconnait pas. Il faut utiliser `setState` et travailler sur des copies.
 
 Pour modifier un tableau par exemple il faut en faire une copie c-a-d:
@@ -88,14 +97,14 @@ Le code :
 `this.setState({tableau : copie})` ou si le nom de la variable locale est identique au nom de la propriété du state : `this.setState({tableau})`
 
 
-# Manipuler les tableaux
+## Manipuler les tableaux
 * `.push()` ajoute un élément
 * `.slice()` copie un tableau. S'écrit aussi `const copie = [...ancien]` (c'est le spread operator)
 * `.splice(x,y)` retire y éléments à partir de l'index x au tableau
 * `.findIndex()`
 * `.map(item => (...) )` parcours le tableau pour appliquer du code sur chaque `item`
 
-# Accéder à un champs dans un formulaire
+## Accéder à un champs dans un formulaire
 Une solution peu apprécié des dev react : 
 * `maRef = React.createRef();` dans la classe 
 * `ref={this.maRef}` dans l'inupt 
@@ -107,7 +116,7 @@ La solution la plus courante est d'uiliser une nouvelle valeur dans le state. Po
 
 L'accès à la donner dans le `handleChange` : `event.currentTarget.value`
 
-# Les props
+## Les props
 Pour passer des paramètres entre classe.
 * Dans le composant appelant : `<Item details={item} />` avec `details` le nom que l'on choisi pour la props
 * Dans le composant appelé : `{this.props.details.id}` avec `id` une donnée d'un `Item`
@@ -118,10 +127,10 @@ On peut également passé un comportement (une fonction), ce qui donne dans l'ap
 
 Donc `handleDelete` de l'appelant est accessible par `this.props.onDelete` dans l'appelé
 
-# Les functional components
+## Les functional components
 Recommandé par React. Lorsque l'affichage est prédictif et qu'il n'y a pas de state. Permet de meilleurs perf
 
-# Le destructuring
+## Le destructuring
 Pour faciliter l'écriture et décomposer en un coup un ensemble d'élements, comme par exemple pour les props:
 
     const details = this.props.details;
@@ -131,7 +140,7 @@ Ré-écrit plus vite en destructuring :
 
     const { details, onDelete} = this.props;
 
-# Les hooks
+## Les hooks
 Ils servent notamment a gérer un state dans un FC.
 La tendance sur React est de ne coder que des FC + hooks ce qui équivaut à une classe stateful
 
@@ -163,13 +172,13 @@ Exemple d'un compteur :
 
 `setCompteur` va mettre à jour le compteur et rappelé le rendu '`handleChange`n'est pas obligatoire
 
-# NavBar & SPA
+## NavBar & SPA
 
     $ npm install react-router-dom --save
 
 Cf cet [article](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm)
 
-# FontAwesome
+## FontAwesome
 
 Installation:
 
@@ -187,7 +196,7 @@ Utilisation:
 
     <FontAwesomeIcon icon={faCoffee} size="4x"/>
 
-# Google Map React
+## Google Map React
 Installation
 
     npm install --save google-map-react
@@ -198,7 +207,7 @@ Importation
 
 [Exemples d'utilisation](https://www.npmjs.com/package/google-map-react)
 
-# Mapbox
+## Mapbox
 
 Installation
 
