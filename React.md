@@ -35,7 +35,7 @@ En gros dans la structure du projet React on a :
 
     $ npm run build
 
-Puis transfert du contenu du répertoire `build` sur le serveur web
+Puis transfert du contenu du répertoire `build` sur le serveur web (voir cet [article](https://stackoverflow.com/questions/56054235/how-to-fix-the-white-screen-after-build-with-create-react-app/56055153))
 
 ## Deploiement sur Node
 
